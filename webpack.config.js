@@ -45,7 +45,26 @@ module.exports = {
   },
   devServer: {
     historyApiFallback: true,
-    noInfo: true
+    noInfo: true,
+    setup: (app) => {
+      // 使用本地模拟数据
+      app.all('/api/*', (req, res, next) => {
+        const filename = path.join(__dirname, 'src/json', req.path);
+
+        // 避免数据缓存
+        delete require.cache[`${filename}.json`];
+        delete require.cache[`${filename}.js`];
+
+        res.send(require(filename));
+      });
+    },
+    // proxy: {
+    //   // 使用后台提供数据
+    //   '/api': {
+    //     target: 'http://api.com',
+    //     changeOrigin: true,
+    //   },
+    // },
   },
   performance: {
     hints: false
