@@ -13,8 +13,8 @@ new Vue({
   router: new VueRouter({
     mode: 'history',
     routes: [
-      { path: '/Hello', component: Hello },
-      { path: '/world', component: World },
+      { path: '/siteA/hello', component: Hello },
+      { path: '/siteA/world', component: World },
     ],
     scrollBehavior() {
       return { x: 0, y: 0 };

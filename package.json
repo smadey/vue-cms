@@ -2,10 +2,15 @@
   "name": "vue-cms",
   "description": "A Vue.js project",
   "version": "1.0.0",
+  "sitesVersion": {
+    "siteMaster": "1.0.0",
+    "siteA": "1.0.0",
+    "siteB": "1.0.0"
+  },
   "author": "smadey@163.com",
   "private": true,
   "scripts": {
-    "dev": "cross-env NODE_ENV=development webpack-dev-server --hot",
+    "dev": "gulp dev",
     "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
   },
   "dependencies": {
@@ -19,11 +24,14 @@
     "cross-env": "^3.0.0",
     "css-loader": "^0.25.0",
     "file-loader": "^0.9.0",
+    "gulp": "^3.9.1",
     "node-sass": "^4.5.0",
     "sass-loader": "^5.0.1",
     "vue-loader": "^12.1.0",
     "vue-template-compiler": "^2.3.3",
     "webpack": "^2.6.1",
-    "webpack-dev-server": "^2.4.5"
+    "webpack-dev-middleware": "^1.11.0",
+    "webpack-dev-server": "^2.4.5",
+    "webpack-merge": "^4.1.0"
   }
 }

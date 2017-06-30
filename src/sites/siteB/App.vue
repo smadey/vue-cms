@@ -1,12 +1,13 @@
 <template>
   <div id="app">
-    <router-link to="/">
+    <a href="/">返回</a>
+    <router-link to="/siteB/">
       <h1>{{title}}</h1>
     </router-link>
 
     <div>
-      <router-link to="/hello">Hello</router-link>
-      <router-link to="/world">World</router-link>
+      <router-link to="/siteB/hello">Hello</router-link>
+      <router-link to="/siteB/world">World</router-link>
     </div>
 
     <keep-alive>
@@ -20,7 +21,7 @@ export default {
   name: 'app',
   data () {
     return {
-      title: 'Vue CMS',
+      title: 'Vue CMS Site B',
     };
   },
 };

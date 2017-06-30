@@ -7,7 +7,7 @@
 <script>
 export default {
   beforeRouteEnter(to, from, next) {
-    fetch('/api/hello')
+    fetch('/api/siteA/hello')
       .then(response => response.json())
       .then((result) => {
         next((vm) => {
