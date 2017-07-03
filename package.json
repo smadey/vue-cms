@@ -10,8 +10,8 @@
   "author": "smadey@163.com",
   "private": true,
   "scripts": {
-    "dev": "gulp dev",
-    "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
+    "dev": "gulp dev --gulpfile ./build/gulpfile.js",
+    "build": "gulp build --gulpfile ./build/gulpfile.js"
   },
   "dependencies": {
     "vue": "^2.3.3",
@@ -24,7 +24,9 @@
     "cross-env": "^3.0.0",
     "css-loader": "^0.25.0",
     "file-loader": "^0.9.0",
+    "get-port": "^3.1.0",
     "gulp": "^3.9.1",
+    "http-proxy-middleware": "^0.17.4",
     "node-sass": "^4.5.0",
     "sass-loader": "^5.0.1",
     "vue-loader": "^12.1.0",
