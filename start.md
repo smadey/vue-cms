@@ -237,7 +237,7 @@ gulp.task('dev', () => {
   });
 });
 ```
-[就这样](https://github.com/smadey/vue-cms/tree/step4)，一个个子站被拆分开，就可以愉快的接入新的业务线了。然而，效率并没有高起来，多个子站还是串行全部编译。
+[就这样](https://github.com/smadey/vue-cms/tree/step4)，一个个子站被拆分开，然而，效率并没有高起来，多个子站还是串行全部编译。
 **第四步**，调整`gulpfile.js`(用**子进程**编译、用**`http-proxy-middleware`**代理编译之后的文件)
 ```javascript
 const spawn = require('child_process').spawn;
@@ -264,7 +264,7 @@ module.exports = (script) => {
   process.once('exit', () => child.kill());
 };
 ```
-```
+```javascript
 const path = require('path');
 
 const express = require('express');
